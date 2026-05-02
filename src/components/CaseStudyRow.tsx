@@ -1,14 +1,6 @@
 import { useRef, useState } from "react";
-
-interface CaseStudy {
-  index: string;
-  title: string;
-  client: string;
-  tags: string[];
-  year: string;
-  metric: string;
-  preview: string; // gradient or color string
-}
+import { Link } from "react-router-dom";
+import type { CaseStudy } from "@/data/caseStudies";
 
 const CaseStudyRow = ({ study }: { study: CaseStudy }) => {
   const ref = useRef<HTMLAnchorElement>(null);
@@ -21,9 +13,9 @@ const CaseStudyRow = ({ study }: { study: CaseStudy }) => {
   };
 
   return (
-    <a
+    <Link
       ref={ref}
-      href="#"
+      to={`/work/${study.slug}`}
       onMouseMove={onMove}
       onMouseLeave={() => setPos((p) => ({ ...p, show: false }))}
       className="group relative block border-t border-border/70 py-8 md:py-10 transition-colors hover:bg-foreground hover:text-background"
@@ -58,7 +50,6 @@ const CaseStudyRow = ({ study }: { study: CaseStudy }) => {
         </span>
       </div>
 
-      {/* Floating preview that follows the cursor */}
       <div
         aria-hidden
         className="pointer-events-none absolute z-10 hidden md:block transition-opacity duration-200"
@@ -70,11 +61,17 @@ const CaseStudyRow = ({ study }: { study: CaseStudy }) => {
         }}
       >
         <div
-          className="h-44 w-60 rounded-lg shadow-soft animate-float-slow"
+          className="h-44 w-60 rounded-lg shadow-soft animate-float-slow overflow-hidden"
           style={{ background: study.preview }}
-        />
+        >
+          <img
+            src={study.cover}
+            alt=""
+            className="h-full w-full object-cover mix-blend-multiply opacity-90"
+          />
+        </div>
       </div>
-    </a>
+    </Link>
   );
 };
 

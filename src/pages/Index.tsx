@@ -2,54 +2,9 @@ import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
 import CaseStudyRow from "@/components/CaseStudyRow";
 import { Link } from "react-router-dom";
+import { caseStudies } from "@/data/caseStudies";
 
-const studies = [
-  {
-    index: "01",
-    title: "Rebuilding onboarding at Northwind",
-    client: "Northwind · Fintech",
-    tags: ["Research", "Design system", "A/B test"],
-    year: "’26",
-    metric: "+38% activation",
-    preview: "linear-gradient(135deg, hsl(12 85% 58%), hsl(28 92% 62%))",
-  },
-  {
-    index: "02",
-    title: "From spreadsheet to product: Atlas Analytics",
-    client: "Atlas · B2B SaaS",
-    tags: ["0→1", "Data viz", "Strategy"],
-    year: "’25",
-    metric: "12k MRR in 90d",
-    preview: "linear-gradient(135deg, hsl(198 70% 38%), hsl(222 30% 11%))",
-  },
-  {
-    index: "03",
-    title: "Designing trust for Lumen Health",
-    client: "Lumen · Healthtech",
-    tags: ["Mobile", "Accessibility"],
-    year: "’25",
-    metric: "−42% drop-off",
-    preview: "linear-gradient(135deg, hsl(48 96% 60%), hsl(12 85% 58%))",
-  },
-  {
-    index: "04",
-    title: "Pricing page that converts: Orbit",
-    client: "Orbit · DevTools",
-    tags: ["Marketing", "Experiments"],
-    year: "’24",
-    metric: "+2.1× CTR",
-    preview: "linear-gradient(135deg, hsl(222 30% 11%), hsl(12 85% 58%))",
-  },
-  {
-    index: "05",
-    title: "An editor designers actually love",
-    client: "Verse · Creative tools",
-    tags: ["IA", "Prototyping"],
-    year: "’24",
-    metric: "NPS 71",
-    preview: "linear-gradient(135deg, hsl(35 30% 88%), hsl(198 70% 38%))",
-  },
-];
+const studies = caseStudies;
 
 const Index = () => {
   return (
