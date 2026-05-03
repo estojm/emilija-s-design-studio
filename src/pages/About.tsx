@@ -56,7 +56,7 @@ const About = () => {
             <div className="mt-10 grid sm:grid-cols-2 gap-x-10 gap-y-6">
               <Block title="Currently">
                 Senior Product Designer, freelance.
-                <br />Open to lead roles in 2026.
+                <br />Open to senior roles in 2026.
               </Block>
               <Block title="Previously">
                 Spotify · N26 · Babbel
