@@ -19,7 +19,7 @@ const SiteFooter = () => {
       <div className="container py-16">
         <div>
           <p className="font-mono text-xs uppercase tracking-widest text-background/50 mb-4">Get in touch</p>
-          <a href="mailto:e.stojmenovska@gmail.com" className="font-display text-4xl md:text-6xl underline-grow">
+          <a href="mailto:e.stojmenovska@gmail.com" className="font-display text-4xl underline-grow md:text-4xl">
             e.stojmenovska@gmail.com
           </a>
         </div>
