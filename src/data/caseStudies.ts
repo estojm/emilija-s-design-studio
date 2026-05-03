@@ -1,8 +1,9 @@
-import northwind from "@/assets/case-northwind.jpg";
-import atlas from "@/assets/case-atlas.jpg";
-import lumen from "@/assets/case-lumen.jpg";
-import orbit from "@/assets/case-orbit.jpg";
-import verse from "@/assets/case-verse.jpg";
+import nrth from "@/assets/case-nrth.jpg";
+import nrth2 from "@/assets/case-nrth-2.jpg";
+import codefu from "@/assets/case-codefu.jpg";
+import codefu2 from "@/assets/case-codefu-2.jpg";
+import swisscard from "@/assets/case-swisscard.jpg";
+import swisscard2 from "@/assets/case-swisscard-2.jpg";
 
 export interface Metric {
   value: string;
@@ -24,7 +25,7 @@ export interface CaseStudy {
   metric: string;
   preview: string;
   hero: string;
-  cover: string; // hero image
+  cover: string;
   role: string;
   team: string;
   duration: string;
@@ -39,200 +40,136 @@ export interface CaseStudy {
 
 export const caseStudies: CaseStudy[] = [
   {
-    slug: "northwind-onboarding",
+    slug: "nrth",
     index: "01",
-    title: "Rebuilding onboarding at Northwind",
-    client: "Northwind · Fintech",
-    tags: ["Research", "Design system", "A/B test"],
-    year: "’26",
-    metric: "+38% activation",
-    preview: "linear-gradient(135deg, hsl(12 85% 58%), hsl(28 92% 62%))",
-    hero: "linear-gradient(135deg, hsl(12 85% 58%), hsl(28 92% 62%))",
-    cover: northwind,
-    role: "Lead Product Designer",
-    team: "1 PM · 3 Eng · 1 Researcher",
-    duration: "5 months",
+    title: "Building NRTH, a financial OS for UK SMEs",
+    client: "NRTH · B2B Fintech SaaS",
+    tags: ["Design system", "0→1", "Web SaaS"],
+    year: "’25",
+    metric: "Live · onboarding clients",
+    preview: "linear-gradient(135deg, hsl(222 30% 11%), hsl(198 70% 38%))",
+    hero: "linear-gradient(135deg, hsl(222 30% 11%), hsl(198 70% 38%))",
+    cover: nrth,
+    role: "Lead Product Designer, UX & UI",
+    team: "Founders · Engineering · PM",
+    duration: "End-to-end · MVP to live",
     overview:
-      "Northwind is a European neobank serving 2.1M customers. New users were dropping out of onboarding at the income-verification step, costing the business an estimated €3.4M in annual revenue.",
+      "NRTH is a UK-based financial operations platform built for SMEs. It consolidates two of the most operationally demanding workflows — collecting money from customers and paying employees and suppliers — into a single, modern, FCA-aligned platform.",
     challenge:
-      "We needed to verify income for compliance, but the existing flow demanded 9 steps and a document upload before users could see any value. Drop-off at step 4 was 57%.",
+      "UK SMEs juggle Direct Debit mandates, late-payment chasing, multi-day settlement, and approver coordination across disconnected tools. Legacy accounting software records transactions but cannot initiate them, and payroll tools don't connect to collections — creating a fragmented, error-prone process with real compliance risk.",
     approach:
-      "I ran 14 user interviews and analysed Amplitude funnels to map exactly where intent collapsed. Together with engineering we redesigned the flow into a progressive disclosure pattern — verification became optional until the user attempted a regulated action.",
+      "As Lead Product Designer I shaped the product from concept to live MVP: aligning with the client on goals, adapting their existing brand into a full design system, and iterating feature by feature with engineering. The system and the interface were built in parallel so we could hit MVP deadlines without sacrificing consistency.",
     outcome:
-      "Activation grew from 41% to 57% (+38%). The team now treats friction-vs-trust as a measurable curve, not a debate.",
+      "NRTH launched and is actively onboarding clients at gonrth.co — a single, FCA-aligned platform handling Collect and Pay flows, role-based views for Approvers and Payers, onboarding, and settings.",
     metrics: [
-      { value: "+38%", label: "Activation rate" },
-      { value: "−57%", label: "Time to first action" },
-      { value: "€3.4M", label: "Projected ARR lift" },
-      { value: "4.7/5", label: "Post-onboarding NPS" },
+      { value: "Live", label: "Product status" },
+      { value: "1", label: "Unified design system" },
+      { value: "2", label: "Core products (Collect & Pay)" },
+      { value: "FCA", label: "Aligned compliance" },
     ],
     sections: [
       {
-        heading: "Listening to the data, then the people",
-        body: "Funnel analysis pointed to step 4 as the leak. Interviews told us why: users felt the bank didn't trust them yet, so why should they hand over a payslip? The fix had to address feeling, not just flow.",
+        heading: "Defining the goal",
+        body: "First step was consulting with the client on what NRTH needed to achieve and translating ambition into clear, testable design requirements.",
       },
       {
-        heading: "Progressive trust, not progressive forms",
-        body: "We split the journey into 'explore' and 'transact' phases. Verification was deferred until the user wanted to move money — the moment trust naturally shifts.",
+        heading: "A design system on top of brand",
+        body: "NRTH already had brand foundations. I extended them into a full product design system — colour primitives, semantic tokens for light and dark, components — so the interface scaled with the product instead of behind it.",
       },
       {
-        heading: "Shipping the experiment",
-        body: "We launched as a 50/50 A/B test across three markets. After 21 days, the variant cleared significance on every primary metric. We rolled it out bank-wide in week 6.",
+        heading: "Iterate, then ship fast",
+        body: "Working alongside engineering, we shipped feature by feature, building the system and interface simultaneously to hit MVP deadlines without compromising the experience.",
       },
     ],
-    gallery: [northwind, atlas],
+    gallery: [nrth, nrth2],
   },
   {
-    slug: "atlas-analytics",
+    slug: "code-fu",
     index: "02",
-    title: "From spreadsheet to product: Atlas Analytics",
-    client: "Atlas · B2B SaaS",
-    tags: ["0→1", "Data viz", "Strategy"],
-    year: "’25",
-    metric: "12k MRR in 90d",
-    preview: "linear-gradient(135deg, hsl(198 70% 38%), hsl(222 30% 11%))",
-    hero: "linear-gradient(135deg, hsl(198 70% 38%), hsl(222 30% 11%))",
-    cover: atlas,
-    role: "Founding Designer",
-    team: "2 founders · 2 Eng",
-    duration: "6 months (0→1)",
+    title: "Redesigning CodeFu for real coders, not assumptions",
+    client: "Code Fu · EdTech",
+    tags: ["Research", "UX redesign", "Accessibility"],
+    year: "’23",
+    metric: "Usability transformed",
+    preview: "linear-gradient(135deg, hsl(322 60% 55%), hsl(12 85% 58%))",
+    hero: "linear-gradient(135deg, hsl(322 60% 55%), hsl(12 85% 58%))",
+    cover: codefu,
+    role: "Lead Product Designer, UX & UI",
+    team: "Engineering · Competition organisers",
+    duration: "Research → redesign → validation",
     overview:
-      "Atlas helps RevOps teams understand pipeline health without writing SQL. I joined as the first designer to take a Looker dashboard and turn it into a product people would pay for.",
+      "Code Fu is a programming competition platform launched in 2007 in North Macedonia. It lets developers and CS students test their skills through algorithmic challenges in a competitive environment, growing year over year in participants and task complexity.",
     challenge:
-      "The market is crowded with dashboards. We had to make complex data feel inevitable — like the user already knew what to ask before they asked it.",
+      "After a rapid migration and redesign, the platform still received negative feedback. Users hit recurring frustrations across practice, challenge, results, and chat flows — making it clear that without a serious focus on UX, reputation and effectiveness would keep eroding.",
     approach:
-      "I built an opinionated default workspace based on 22 sales-leader interviews, then layered customisation as an escape hatch. Every chart had a 'why this matters' caption, written like a colleague would.",
+      "I ran user interviews across newcomers, seasoned competitors, and solo practisers, capturing observations in Miro. Findings were clustered into pain points across practice, challenges, results and chat. From there, the system was redesigned in Figma with deliberate accessibility — a high-contrast dark palette, Open Sans for legibility, and customisation for individual needs.",
     outcome:
-      "Reached $12k MRR within 90 days of public launch with no paid acquisition. Atlas closed a $2.4M seed round on the strength of the product demo.",
+      "Validation testing showed substantial improvements: a system that not only worked more intuitively but elicited genuine appreciation from its users. Accessibility considerations were baked into interviews and testing rather than bolted on at the end.",
     metrics: [
-      { value: "$12k", label: "MRR in 90 days" },
-      { value: "31", label: "Paying customers" },
-      { value: "78%", label: "Trial → paid" },
-      { value: "$2.4M", label: "Seed raised" },
+      { value: "3", label: "User segments interviewed" },
+      { value: "4", label: "Flow areas redesigned" },
+      { value: "WCAG", label: "Contrast & legibility" },
+      { value: "↑", label: "User satisfaction" },
     ],
     sections: [
       {
-        heading: "Opinions over options",
-        body: "Most analytics tools start blank. Atlas starts with a point of view. The default dashboard answers the three questions every revenue leader wakes up asking — and earns the right to ask more later.",
+        heading: "Listening before redesigning",
+        body: "Interviews surfaced real friction: users hunting for a back button, missing the exit-round action, mistaking chat for a 1:1, and not noticing critical notifications. Each quote went into the Miro board so patterns — not opinions — drove the redesign.",
       },
       {
-        heading: "Charts that explain themselves",
-        body: "Every visual ships with a one-sentence interpretation. Not a tooltip — a caption. It changed how customers talked about Atlas in demos.",
+        heading: "Pain points, clustered",
+        body: "Findings grouped into four areas: finding and entering practice, distinguishing challenge vs practice, locating results and chat, and overall navigation. Each cluster became a design brief instead of an isolated bug.",
+      },
+      {
+        heading: "Designed for everyone",
+        body: "A dark, high-contrast palette and Open Sans gave readability across visual abilities. Customisation options let users tailor the experience, and accessibility was tested with users — not assumed.",
       },
     ],
-    gallery: [atlas, orbit],
+    gallery: [codefu, codefu2],
   },
   {
-    slug: "lumen-health",
+    slug: "swisscard",
     index: "03",
-    title: "Designing trust for Lumen Health",
-    client: "Lumen · Healthtech",
-    tags: ["Mobile", "Accessibility"],
-    year: "’25",
-    metric: "−42% drop-off",
-    preview: "linear-gradient(135deg, hsl(48 96% 60%), hsl(12 85% 58%))",
-    hero: "linear-gradient(135deg, hsl(48 96% 60%), hsl(12 85% 58%))",
-    cover: lumen,
-    role: "Senior Product Designer",
-    team: "1 PM · 4 Eng · 1 Clinical advisor",
-    duration: "4 months",
-    overview:
-      "Lumen connects patients with mental-health professionals. The booking flow was abandoning anxious users at the worst possible moment.",
-    challenge:
-      "Booking a first therapy session is emotionally heavy. Every extra field is a reason to close the tab. We had to balance clinical requirements with kindness.",
-    approach:
-      "Co-design sessions with patients and clinicians shaped a flow that asks what's needed, when it's needed, and explains why. WCAG 2.2 AA throughout, with a calmer motion language for transitions.",
-    outcome:
-      "Booking drop-off fell 42%. Average time to first session shortened from 11 days to 4.",
-    metrics: [
-      { value: "−42%", label: "Drop-off" },
-      { value: "11→4", label: "Days to first session" },
-      { value: "AA", label: "WCAG 2.2 conformance" },
-      { value: "+24%", label: "Patient retention" },
-    ],
-    sections: [
-      {
-        heading: "Designing for the worst day",
-        body: "We assumed users were tired, distracted, and reaching out at midnight. The flow had to work in that state — not the showroom state.",
-      },
-      {
-        heading: "Calm motion, careful copy",
-        body: "Transitions slowed from 200ms to 320ms. Confirmation language moved from 'Submit' to 'I'm ready'. Small choices, measurable lift.",
-      },
-    ],
-    gallery: [lumen, verse],
-  },
-  {
-    slug: "orbit-pricing",
-    index: "04",
-    title: "Pricing page that converts: Orbit",
-    client: "Orbit · DevTools",
-    tags: ["Marketing", "Experiments"],
+    title: "Making credit card management feel effortless at Swisscard",
+    client: "Swisscard · Mobile Banking",
+    tags: ["iOS", "Research", "Usability testing"],
     year: "’24",
-    metric: "+2.1× CTR",
-    preview: "linear-gradient(135deg, hsl(222 30% 11%), hsl(12 85% 58%))",
-    hero: "linear-gradient(135deg, hsl(222 30% 11%), hsl(12 85% 58%))",
-    cover: orbit,
-    role: "Product Designer (contract)",
-    team: "1 PMM · 2 Eng",
-    duration: "6 weeks",
+    metric: "Released · improved CSAT",
+    preview: "linear-gradient(135deg, hsl(0 70% 50%), hsl(222 30% 11%))",
+    hero: "linear-gradient(135deg, hsl(0 70% 50%), hsl(222 30% 11%))",
+    cover: swisscard,
+    role: "Senior Product Designer (iOS)",
+    team: "PMs · iOS engineers · Researchers",
+    duration: "Research → design → release",
     overview:
-      "Orbit's pricing page was beautifully designed and converting at 1.4%. We rebuilt it around the question developers actually ask: 'will this break at scale?'",
+      "Swisscard is a leading Swiss credit card provider serving thousands of customers through its iOS app for card management, payments, and account control. My role focused on improving usability, clarity, and task efficiency across critical card management features.",
     challenge:
-      "Tier comparison tables hide the answer developers care about. We had to surface scale, limits, and migration cost without overwhelming the page.",
+      "Users struggled with sensitive actions — blocking a card, updating personal information, managing security settings. Around 36% of analysed feedback referenced difficulty locating security-related settings, and card lock/unlock sat in the top three support topics. Users were calling customer service for tasks the app should handle on its own.",
     approach:
-      "I prototyped six variants and ran a sequential test. The winner used an interactive scale slider that showed live cost across tiers — anchoring on usage instead of features.",
+      "I gathered insights from 200+ App Store reviews, 80 survey responses, support tickets and competitor analysis. Workshops turned raw feedback into structured hypotheses (e.g. 'Moving Card account details to the primary view will reduce search time'). The new IA was prototyped in Figma on top of the Swisscard design system, validated through moderated usability testing on real tasks: lock/unlock, change PIN, update address, manage cardholders.",
     outcome:
-      "CTR to sign-up jumped from 1.4% to 2.9% (+107%). The slider pattern became part of Orbit's design system.",
+      "The redesigned app shipped with clearer navigation, more discoverable security features, and simplified account flows. Post-release feedback showed improved satisfaction and fewer reported usability issues on core card-management tasks.",
     metrics: [
-      { value: "+2.1×", label: "Sign-up CTR" },
-      { value: "6", label: "Variants tested" },
-      { value: "94%", label: "Statistical confidence" },
-      { value: "−18%", label: "Sales-assisted deals" },
+      { value: "200+", label: "Reviews analysed" },
+      { value: "36%", label: "Mentioned security findability" },
+      { value: "Top 3", label: "Support topic resolved in-app" },
+      { value: "WCAG", label: "Accessibility aligned" },
     ],
     sections: [
       {
-        heading: "Anchoring on usage",
-        body: "Developers don't choose plans, they choose limits. The scale slider made the trade-off visible in one motion.",
+        heading: "Research from many signals",
+        body: "App Store reviews, CSAT surveys, support tickets, behavioural data and competitor flows together painted a realistic picture of where the app failed users — especially around navigation, discoverability and terminology.",
       },
-    ],
-    gallery: [orbit, atlas],
-  },
-  {
-    slug: "verse-editor",
-    index: "05",
-    title: "An editor designers actually love",
-    client: "Verse · Creative tools",
-    tags: ["IA", "Prototyping"],
-    year: "’24",
-    metric: "NPS 71",
-    preview: "linear-gradient(135deg, hsl(35 30% 88%), hsl(198 70% 38%))",
-    hero: "linear-gradient(135deg, hsl(35 30% 88%), hsl(198 70% 38%))",
-    cover: verse,
-    role: "Senior Product Designer",
-    team: "1 PM · 5 Eng",
-    duration: "8 months",
-    overview:
-      "Verse is a prose-and-design tool for creative directors. The challenge: build an editor powerful enough for pros, calm enough for daily use.",
-    challenge:
-      "Existing tools optimise for power-users via density. We bet that restraint would win — fewer surfaces, sharper defaults, deeper keyboard support.",
-    approach:
-      "I rebuilt the IA around three modes (write, layout, share) and prototyped every interaction in code. Keyboard-first; mouse as a fallback.",
-    outcome:
-      "Post-launch NPS landed at 71 — the highest in the company's history. Daily active sessions tripled within two quarters.",
-    metrics: [
-      { value: "71", label: "NPS at launch" },
-      { value: "3×", label: "Daily active sessions" },
-      { value: "120ms", label: "Median input latency" },
-      { value: "0", label: "Modal dialogs in core flow" },
-    ],
-    sections: [
       {
-        heading: "Three modes, no menus",
-        body: "Write, layout, share. Each mode hides what doesn't belong. Users stop fishing for tools because the tools come to them.",
+        heading: "Hypothesis-driven IA",
+        body: "Card sorting and journey mapping restructured features into logical groups aligned with users' mental models. Each change was framed as a hypothesis with a measurable expectation, not a stylistic preference.",
+      },
+      {
+        heading: "Validated, then refined",
+        body: "Moderated usability tests on real tasks revealed the remaining friction. Iteration tightened labels, surfaced sensitive actions, and clarified system feedback so users could complete critical actions confidently.",
       },
     ],
-    gallery: [verse, lumen],
+    gallery: [swisscard, swisscard2],
   },
 ];
 
