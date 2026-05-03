@@ -25,7 +25,7 @@ const About = () => {
                 className="relative rounded-md shadow-soft w-full object-cover aspect-[4/5] grayscale hover:grayscale-0 transition-all duration-700"
               />
               <span className="absolute -bottom-4 -right-4 bg-foreground text-background font-mono text-xs px-3 py-2 rotate-3 shadow-soft">
-                Emilija · Berlin ’26
+                Emilija · Product Designer
               </span>
             </div>
           </div>
