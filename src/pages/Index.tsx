@@ -51,7 +51,7 @@ const Index = () => {
             <div className="md:col-span-3 md:col-start-9 flex flex-col gap-2 font-mono text-xs animate-reveal-up" style={{ animationDelay: "200ms" }}>
               <Stat label="Years shipping" value="10" />
               <Stat label="Experiments run" value="140+" />
-              <Stat label="Currently" value="Open to lead roles" accent />
+              <Stat label="Currently" value="Open to senior roles" accent />
             </div>
           </div>
         </div>
@@ -114,7 +114,7 @@ const Index = () => {
 const Stat = ({ label, value, accent }: { label: string; value: string; accent?: boolean }) => (
   <div className="flex items-baseline justify-between border-b border-border/70 pb-2">
     <span className="uppercase tracking-widest text-foreground/50">{label}</span>
-    <span className={`font-display text-2xl ${accent ? "text-accent italic" : ""}`}>{value}</span>
+    <span className={`font-display ${accent ? "text-accent italic text-lg" : "text-2xl"}`}>{value}</span>
   </div>
 );
 
