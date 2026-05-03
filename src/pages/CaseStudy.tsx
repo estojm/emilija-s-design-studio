@@ -59,6 +59,51 @@ const CaseStudy = () => {
     );
   }
 
+  if (requiredPassword && !unlocked) {
+    return (
+      <div className="min-h-screen">
+        <SiteNav />
+        <div className="container py-24 md:py-32 max-w-md">
+          <p className="font-mono text-xs uppercase tracking-widest text-foreground/50 mb-4">
+            Protected case study
+          </p>
+          <h1 className="font-display text-4xl md:text-5xl mb-4">
+            This one's behind a password<span className="text-accent">.</span>
+          </h1>
+          <p className="text-foreground/70 mb-8">
+            Reach out if you'd like access — or enter the password below.
+          </p>
+          <form onSubmit={handleUnlock} className="space-y-4">
+            <input
+              type="password"
+              value={pwInput}
+              onChange={(e) => setPwInput(e.target.value)}
+              placeholder="Password"
+              autoFocus
+              className="w-full rounded-md border border-border bg-background px-4 py-3 font-mono text-sm focus:outline-none focus:ring-2 focus:ring-accent"
+            />
+            {pwError && (
+              <p className="font-mono text-xs text-destructive">{pwError}</p>
+            )}
+            <button
+              type="submit"
+              className="inline-flex items-center gap-2 rounded-full bg-foreground text-background px-6 py-3 font-mono text-sm hover:shadow-pop transition-all"
+            >
+              Unlock →
+            </button>
+          </form>
+          <Link
+            to="/#work"
+            className="mt-8 inline-block underline-grow font-mono text-xs uppercase tracking-widest text-foreground/60"
+          >
+            ← Back to work
+          </Link>
+        </div>
+        <SiteFooter />
+      </div>
+    );
+  }
+
   const currentIdx = caseStudies.findIndex((c) => c.slug === study.slug);
   const next = caseStudies[(currentIdx + 1) % caseStudies.length];
 
