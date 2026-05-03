@@ -44,9 +44,9 @@ const Index = () => {
 
           <div className="mt-12 grid md:grid-cols-12 gap-6 md:gap-8 items-end">
             <p className="md:col-span-6 text-lg md:text-xl text-foreground/75 max-w-xl animate-reveal-up" style={{ animationDelay: "120ms" }}>
-              I design digital products where intuition meets evidence — pairing crisp
-              interfaces with experimentation, analytics, and a stubborn love for the
-              user.
+              From insight to execution — I design experiences that align user needs
+              with business impact. Backed by a decade of experience and frontend
+              knowledge, I turn ideas into scalable, real-world products.
             </p>
             <div className="md:col-span-3 md:col-start-9 flex flex-col gap-2 font-mono text-xs animate-reveal-up" style={{ animationDelay: "200ms" }}>
               <Stat label="Years shipping" value="6" />
