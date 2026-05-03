@@ -1,5 +1,5 @@
 const SiteFooter = () => {
-  const items = ["Available · Q3 ’26", "Based in Berlin", "ex-Spotify · ex-N26", "hello@emilija.design"];
+  const items = ["Available · Q3 ’26", "Based in Berlin", "ex-Spotify · ex-N26", "e.stojmenovska@gmail.com"];
   return (
     <footer className="relative overflow-hidden bg-foreground text-background mt-32">
       <div className="border-y border-background/10 py-6 overflow-hidden">
@@ -19,8 +19,8 @@ const SiteFooter = () => {
       <div className="container py-16">
         <div>
           <p className="font-mono text-xs uppercase tracking-widest text-background/50 mb-4">Get in touch</p>
-          <a href="mailto:hello@emilija.design" className="font-display text-4xl md:text-6xl underline-grow">
-            hello@emilija.design
+          <a href="mailto:e.stojmenovska@gmail.com" className="font-display text-4xl md:text-6xl underline-grow">
+            e.stojmenovska@gmail.com
           </a>
         </div>
       </div>
