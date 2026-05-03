@@ -49,7 +49,7 @@ const Index = () => {
               knowledge, I turn ideas into scalable, real-world products.
             </p>
             <div className="md:col-span-3 md:col-start-9 flex flex-col gap-2 font-mono text-xs animate-reveal-up" style={{ animationDelay: "200ms" }}>
-              <Stat label="Years shipping" value="6" />
+              <Stat label="Years shipping" value="10" />
               <Stat label="Experiments run" value="140+" />
               <Stat label="Currently" value="Open to lead roles" accent />
             </div>
