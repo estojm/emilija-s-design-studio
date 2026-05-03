@@ -63,9 +63,8 @@ const About = () => {
                 Spotify · N26 · Babbel
                 <br />Designit (consultancy)
               </Block>
-              <Block title="Toolkit">
-                Figma, Amplitude, Mixpanel, SQL,
-                <br />Framer, a little bit of React.
+              <Block title="Clients">
+                G+D Netcetera · Valtech · WSAudiology
               </Block>
               <Block title="Speaking">
                 Config ’25 · UX Berlin ’24
