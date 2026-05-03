@@ -74,10 +74,10 @@ const About = () => {
 
             <div className="mt-12 flex flex-wrap gap-4">
               <a
-                href="mailto:hello@emilija.design"
+                href="mailto:e.stojmenovska@gmail.com"
                 className="inline-flex items-center gap-2 rounded-full bg-foreground text-background px-6 py-3 font-mono text-sm hover:shadow-pop transition-all"
               >
-                Start a project →
+                Let's talk →
               </a>
               <Link
                 to="/"
