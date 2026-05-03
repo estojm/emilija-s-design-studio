@@ -16,20 +16,13 @@ const SiteFooter = () => {
           ))}
         </div>
       </div>
-      <div className="container py-16 grid gap-10 md:grid-cols-2">
+      <div className="container py-16">
         <div>
           <p className="font-mono text-xs uppercase tracking-widest text-background/50 mb-4">Get in touch</p>
           <a href="mailto:hello@emilija.design" className="font-display text-4xl md:text-6xl underline-grow">
             hello@emilija.design
           </a>
         </div>
-        <ul className="space-y-2 md:justify-self-end font-mono text-sm">
-          {items.map((i) => (
-            <li key={i} className="flex items-center gap-2 text-background/70">
-              <span className="h-1 w-1 rounded-full bg-accent" /> {i}
-            </li>
-          ))}
-        </ul>
       </div>
       <div className="container pb-8 flex justify-between text-xs font-mono text-background/40">
         <span>© 2026 Emilija</span>
