@@ -37,9 +37,10 @@ const About = () => {
 
             <div className="mt-8 space-y-5 text-lg text-foreground/80 max-w-xl">
               <p>
-                I'm a senior product designer with six years of shipping consumer
-                and B2B products across fintech, healthtech, and developer tools.
-                I came to design through statistics — and I never quite let go.
+                I’m a Product Designer with 10 years of experience shaping digital
+                products from early concept to launch. I work across the full
+                product lifecycle—combining user research, strategy, and hands-on
+                design to create experiences that are both intuitive and impactful.
               </p>
               <p>
                 My favourite work sits at the intersection of craft and curiosity:
