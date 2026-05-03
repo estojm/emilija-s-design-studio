@@ -48,8 +48,9 @@ const About = () => {
                 experimentation, and the right metric at the right time.
               </p>
               <p>
-                Outside of work you'll find me bouldering, brewing pour-over, and
-                writing the occasional essay on why dashboards should be kinder.
+                I’m particularly interested in solving complex problems, turning
+                ambiguity into clarity, and creating products that align user needs
+                with business goals.
               </p>
             </div>
 
