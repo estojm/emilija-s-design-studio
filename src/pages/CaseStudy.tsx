@@ -1,17 +1,45 @@
 import { Link, useParams } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
 import { caseStudies, getCaseStudy } from "@/data/caseStudies";
+
+const PROTECTED_SLUGS: Record<string, string> = {
+  nrth: "EmcheDesigns1234",
+};
+const STORAGE_PREFIX = "cs-unlock:";
 
 const CaseStudy = () => {
   const { slug } = useParams();
   const study = slug ? getCaseStudy(slug) : undefined;
 
+  const requiredPassword = slug ? PROTECTED_SLUGS[slug] : undefined;
+  const [unlocked, setUnlocked] = useState(false);
+  const [pwInput, setPwInput] = useState("");
+  const [pwError, setPwError] = useState("");
+
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
     if (study) document.title = `${study.title} — Emilija`;
-  }, [study]);
+    if (slug && requiredPassword) {
+      setUnlocked(sessionStorage.getItem(STORAGE_PREFIX + slug) === "1");
+    } else {
+      setUnlocked(true);
+    }
+    setPwInput("");
+    setPwError("");
+  }, [study, slug, requiredPassword]);
+
+  const handleUnlock = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (pwInput === requiredPassword) {
+      sessionStorage.setItem(STORAGE_PREFIX + (slug ?? ""), "1");
+      setUnlocked(true);
+      setPwError("");
+    } else {
+      setPwError("Incorrect password.");
+    }
+  };
 
   if (!study) {
     return (
