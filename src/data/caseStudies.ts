@@ -160,7 +160,7 @@ export const caseStudies: CaseStudy[] = [
         body: "Close collaboration with iOS engineers ensured high-quality, feasible implementation aligned with Apple Human Interface Guidelines and WCAG accessibility principles.",
       },
     ],
-    gallery: [swisscard3, swisscard, swisscard2],
+    gallery: [swisscard3, swisscard],
   },
 ];
 
