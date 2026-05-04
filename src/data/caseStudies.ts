@@ -4,6 +4,7 @@ import codefu from "@/assets/case-codefu.jpg";
 import codefu2 from "@/assets/case-codefu-2.jpg";
 import swisscard from "@/assets/case-swisscard.jpg";
 import swisscard2 from "@/assets/case-swisscard-2.jpg";
+import swisscard3 from "@/assets/case-swisscard-3.jpg";
 
 export interface Metric {
   value: string;
