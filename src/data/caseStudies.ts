@@ -36,7 +36,14 @@ export interface CaseStudy {
   metrics: Metric[];
   sections: Section[];
   gallery: string[];
+  protected?: boolean;
 }
+
+// Image map used to resolve protected case study images after authorization.
+export const caseStudyImages: Record<string, string> = {
+  nrth,
+  nrth2,
+};
 
 export const caseStudies: CaseStudy[] = [
   {
@@ -50,38 +57,17 @@ export const caseStudies: CaseStudy[] = [
     preview: "linear-gradient(135deg, hsl(222 30% 11%), hsl(198 70% 38%))",
     hero: "linear-gradient(135deg, hsl(222 30% 11%), hsl(198 70% 38%))",
     cover: nrth,
-    role: "Lead Product Designer, UX & UI",
-    team: "Founders · Engineering · PM",
-    duration: "End-to-end · MVP to live",
-    overview:
-      "NRTH is a UK-based financial operations platform built for SMEs. It consolidates two of the most operationally demanding workflows — collecting money from customers and paying employees and suppliers — into a single, modern, FCA-aligned platform.",
-    challenge:
-      "UK SMEs juggle Direct Debit mandates, late-payment chasing, multi-day settlement, and approver coordination across disconnected tools. Legacy accounting software records transactions but cannot initiate them, and payroll tools don't connect to collections — creating a fragmented, error-prone process with real compliance risk.",
-    approach:
-      "As Lead Product Designer I shaped the product from concept to live MVP: aligning with the client on goals, adapting their existing brand into a full design system, and iterating feature by feature with engineering. The system and the interface were built in parallel so we could hit MVP deadlines without sacrificing consistency.",
-    outcome:
-      "NRTH launched and is actively onboarding clients at gonrth.co — a single, FCA-aligned platform handling Collect and Pay flows, role-based views for Approvers and Payers, onboarding, and settings.",
-    metrics: [
-      { value: "Live", label: "Product status" },
-      { value: "1", label: "Unified design system" },
-      { value: "2", label: "Core products (Collect & Pay)" },
-      { value: "FCA", label: "Aligned compliance" },
-    ],
-    sections: [
-      {
-        heading: "Defining the goal",
-        body: "First step was consulting with the client on what NRTH needed to achieve and translating ambition into clear, testable design requirements.",
-      },
-      {
-        heading: "A design system on top of brand",
-        body: "NRTH already had brand foundations. I extended them into a full product design system — colour primitives, semantic tokens for light and dark, components — so the interface scaled with the product instead of behind it.",
-      },
-      {
-        heading: "Iterate, then ship fast",
-        body: "Working alongside engineering, we shipped feature by feature, building the system and interface simultaneously to hit MVP deadlines without compromising the experience.",
-      },
-    ],
-    gallery: [nrth, nrth2],
+    role: "",
+    team: "",
+    duration: "",
+    overview: "",
+    challenge: "",
+    approach: "",
+    outcome: "",
+    metrics: [],
+    sections: [],
+    gallery: [],
+    protected: true,
   },
   {
     slug: "code-fu",
