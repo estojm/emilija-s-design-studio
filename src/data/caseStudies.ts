@@ -124,18 +124,18 @@ export const caseStudies: CaseStudy[] = [
     metric: "Released · improved CSAT",
     preview: "linear-gradient(135deg, hsl(0 70% 50%), hsl(222 30% 11%))",
     hero: "linear-gradient(135deg, hsl(0 70% 50%), hsl(222 30% 11%))",
-    cover: swisscard,
-    role: "Senior Product Designer (iOS)",
-    team: "PMs · iOS engineers · Researchers",
-    duration: "Research → design → release",
+    cover: swisscard3,
+    role: "Senior Product Designer (iOS) — design lead",
+    team: "Product · iOS engineers · Research",
+    duration: "Research → design → validation → release",
     overview:
-      "Swisscard is a leading Swiss credit card provider serving thousands of customers through its iOS app for card management, payments, and account control. My role focused on improving usability, clarity, and task efficiency across critical card management features.",
+      "My first opportunity to lead design as a Senior Product Designer, working on the iOS app for Swisscard — a leading Swiss credit card provider. I focused on improving usability, clarity, and user confidence across high-risk card management actions like locking a card, updating personal details, and managing security settings. The challenge: users struggled to complete critical actions independently, often relying on customer support for simple tasks.",
     challenge:
-      "Users struggled with sensitive actions — blocking a card, updating personal information, managing security settings. Around 36% of analysed feedback referenced difficulty locating security-related settings, and card lock/unlock sat in the top three support topics. Users were calling customer service for tasks the app should handle on its own.",
+      "User feedback revealed a clear pattern of friction in core journeys. 36% of complaints related to difficulty finding security settings, card lock/unlock was among the top 3 support issues, users lacked confidence performing sensitive actions, and navigation and terminology didn't match user mental models. The impact: increased support costs, reduced trust, and poor task efficiency.",
     approach:
-      "I gathered insights from 200+ App Store reviews, 80 survey responses, support tickets and competitor analysis. Workshops turned raw feedback into structured hypotheses (e.g. 'Moving Card account details to the primary view will reduce search time'). The new IA was prototyped in Figma on top of the Swisscard design system, validated through moderated usability testing on real tasks: lock/unlock, change PIN, update address, manage cardholders.",
+      "I synthesised insights from 200+ App Store reviews, 80+ survey responses, support tickets, behavioural data and competitor analysis. The key insight: users weren't failing because features were missing — they were failing because they couldn't find or trust them. We reframed problems as testable hypotheses (e.g. 'surfacing key actions on the main card screen will reduce search time'), shifting the team from assumptions to evidence-based decisions. I led workshops to cluster feedback, rebuild the IA via card sorting, and map journeys by risk and frequency. Flows were redesigned in Figma on the Swisscard design system, prototyped, and validated through moderated usability tests on lock/unlock, update details, change PIN, and manage cardholders.",
     outcome:
-      "The redesigned app shipped with clearer navigation, more discoverable security features, and simplified account flows. Post-release feedback showed improved satisfaction and fewer reported usability issues on core card-management tasks.",
+      "The redesigned experience reduced reliance on customer support for key tasks, increased discoverability of security features, improved task completion speed and clarity, and raised user confidence in sensitive actions. The release validated how structured research and iterative design can directly improve trust in financial products.",
     metrics: [
       { value: "200+", label: "Reviews analysed" },
       { value: "36%", label: "Mentioned security findability" },
@@ -144,19 +144,23 @@ export const caseStudies: CaseStudy[] = [
     ],
     sections: [
       {
-        heading: "Research from many signals",
-        body: "App Store reviews, CSAT surveys, support tickets, behavioural data and competitor flows together painted a realistic picture of where the app failed users — especially around navigation, discoverability and terminology.",
+        heading: "From assumptions to hypotheses",
+        body: "Each pain point was reframed as a testable hypothesis tied to a measurable outcome — search time, task success, confidence — so design decisions were grounded in evidence rather than opinion.",
       },
       {
-        heading: "Hypothesis-driven IA",
-        body: "Card sorting and journey mapping restructured features into logical groups aligned with users' mental models. Each change was framed as a hypothesis with a measurable expectation, not a stylistic preference.",
+        heading: "Restructured around mental models",
+        body: "Card sorting and journey mapping rebuilt the information architecture so high-risk actions like lock/unlock surfaced on primary screens, and terminology matched how users actually think about their cards.",
       },
       {
-        heading: "Validated, then refined",
-        body: "Moderated usability tests on real tasks revealed the remaining friction. Iteration tightened labels, surfaced sensitive actions, and clarified system feedback so users could complete critical actions confidently.",
+        heading: "Confidence as a UX metric",
+        body: "Moderated testing focused not just on task success and time, but on hesitation and confidence in sensitive flows. Even small labelling changes meaningfully improved how safely users felt completing critical actions.",
+      },
+      {
+        heading: "Built with engineering and accessibility in mind",
+        body: "Close collaboration with iOS engineers ensured high-quality, feasible implementation aligned with Apple Human Interface Guidelines and WCAG accessibility principles.",
       },
     ],
-    gallery: [swisscard, swisscard2],
+    gallery: [swisscard3, swisscard, swisscard2],
   },
 ];
 
